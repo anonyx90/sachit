@@ -6,7 +6,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, Github, ArrowRight } from "lucide-react"
 import { useRef } from "react"
+import { cubicBezier } from "framer-motion";
 
+const customEase = cubicBezier(0.42, 0, 0.58, 1);
 const projects = [
   {
     id: 1,
@@ -115,7 +117,7 @@ export function ProjectsShowcase() {
       y: 0,
       transition: {
         duration: 0.8,
-        ease: [0.4, 0, 0.2, 1],
+        ease: customEase,
       },
     },
   }
