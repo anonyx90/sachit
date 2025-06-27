@@ -98,13 +98,11 @@ export function FloatingNavbar() {
             {/* Mobile Navigation */}
             <div className="md:hidden flex items-center justify-between px-4 py-3">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">AC</span>
-                </div>
-                <span className="font-semibold text-foreground">Alex Chen</span>
               </div>
-
-              <MobileMenu activeSection={activeSection} onSectionClick={scrollToSection} />
+       
+              <div className="flex-1 flex justify-end">
+                <MobileMenu activeSection={activeSection} onSectionClick={scrollToSection} />
+              </div>
             </div>
           </nav>
         </motion.div>

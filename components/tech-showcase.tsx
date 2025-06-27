@@ -4,7 +4,6 @@ import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
 import { useTheme } from "next-themes"
 import { SiDjango, SiReactquery, SiGraphql, SiPrisma, SiFramer } from "react-icons/si"
-import { DotPattern } from "./magicui/dot-pattern"
 import { cn } from "@/lib/utils"
 
 const technologies = [
@@ -177,7 +176,6 @@ function TechCard({ tech, index }: TechCardProps) {
 		},
 		hover: {
 			boxShadow: `0 0 40px 0 rgba(${tech.glowColor}, 0.35), 0 0 80px 0 rgba(${tech.glowColor}, 0.18), 0 2px 8px 0 rgba(0,0,0,0.08)`,
-			scale: 1.08,
 			transition: {
 				duration: 0.7,
 				ease: smoothEase,
@@ -308,10 +306,7 @@ export function TechShowcase() {
 	return (
 		<section id="technologies" className="py-32 relative overflow-hidden">
 			<div className="relative flex w-full flex-col items-center justify-center py-8 sm:py-16">
-				<DotPattern
-					glow={true}
-					className={cn("[mask-image:radial-gradient(300px_circle_at_center,white,transparent)]")}
-				/>
+				
 
 				<motion.div
 					className="absolute inset-0 bg-gradient-to-b from-transparent via-muted/3 to-transparent pointer-events-none"
